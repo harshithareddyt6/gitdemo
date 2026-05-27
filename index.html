@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Community Event Portal</title>
+
+  <style>
+
+    body {
+      
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #1e3a5f;
+      padding: 15px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    #welcomeBanner {
+      background: blue;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 12px;
+    }
+
+    .highlight {
+      background-color: #f1db4e;
+      color: black;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 25px;
+      color: #333;
+    }
+
+    .eventpictures {
+      width: 90%;
+      margin: auto;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .eventpictures th {
+      background-color: #1e3a5f;
+      color: white;
+      padding: 12px;
+    }
+
+    .eventpictures td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .eventpictures img {
+      width: 220px;
+      height: 140px;
+      border-radius: 12px;
+      border: 5px solid #1e3a5f;
+      transition: transform 0.3s;
+    }
+
+    .eventpictures img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      background-color: white;
+      width: 70%;
+      margin: auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid gray;
+    }
+
+    button {
+      background-color: #1e3a5f;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+
+    footer {
+      background-color: #1e3a5f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="help.html" target="_blank">Help</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="home">
+
+      <div id="welcomeBanner">
+
+        <h1>Welcome to the Local Community Event Portal</h1>
+
+        <p class="highlight">
+          Your one-stop destination for all local events and activities.
+        </p>
+
+        <p class="highlight">
+          Register now
+          <span style="color:red; font-weight:bold;">
+            Limited slots available!
+          </span>
+        </p>
+
+      </div>
+
+    </section>
+
+    <section id="events">
+
+      <h2 class="highlight">Events</h2>
+
+      <ul>
+        <li>Community Picnic</li>
+        <li>Farmers Market</li>
+        <li>Outdoor Movie Night</li>
+      </ul>
+
+    </section>
+
+    <section id="contact">
+
+      <h2 class="highlight">Contact Us</h2>
+
+      <p>Email: localcommunityportal@gmail.com</p>
+
+    </section>
+
+    <table class="eventpictures">
+
+      <caption>
+        <h2 class="highlight">Community Event Gallery</h2>
+      </caption>
+
+      <tr>
+        <th>Event Name</th>
+        <th>Image</th>
+        <th>Date</th>
+      </tr>
+
+      <tr>
+        <td>Community Picnic</td>
+
+        <td>
+          <img
+            src="https://img1.10bestmedia.com/Images/Photos/416367/GettyImages-966220644_54_990x660.jpg?auto=webp&width=3840&quality=75"
+            alt="Community Picnic"
+            title="Community Picnic">
+        </td>
+
+        <td>July 15th</td>
+      </tr>
+
+      <tr>
+        <td>Farmers Market</td>
+
+        <td>
+          <img
+            src="https://t4.ftcdn.net/jpg/01/47/02/41/360_F_147024160_zq172l5lOLla4WhdEf1uvcATRlUVDT52.jpg"
+            alt="Farmers Market"
+            title="Farmers Market">
+        </td>
+
+        <td>Every Saturday</td>
+      </tr>
+
+      <tr>
+        <td>Outdoor Movie Night</td>
+
+        <td>
+          <img
+            src="https://static.wixstatic.com/media/799836_c1667c9e3d994ca8989a600bac76654e~mv2.jpg/v1/fill/w_568,h_526,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/799836_c1667c9e3d994ca8989a600bac76654e~mv2.jpg"
+            alt="Outdoor Movie Night"
+            title="Outdoor Movie Night">
+        </td>
+
+        <td>August 20th</td>
+      </tr>
+
+    </table>
+
+    <section id="registration">
+
+      <h2 class="highlight">Event Registration Form</h2>
+
+      <form onsubmit="showMessage(event)">
+
+        <label>Full Name:</label>
+
+        <input
+          type="text"
+          placeholder="Enter your name"
+          required
+          autofocus>
+
+        <label>Email:</label>
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          required>
+
+        <label>Phone Number:</label>
+
+        <input
+          type="text"
+          id="phone"
+          placeholder="Enter your phone number"
+          onblur="validatePhone()">
+
+        <label>Event Date:</label>
+
+        <input type="date" required>
+
+        <label>Select Event:</label>
+
+        <select id="eventType" onchange="showFee()">
+
+          <option value="">Choose Event</option>
+          <option value="100">Community Picnic</option>
+          <option value="150">Farmers Market</option>
+          <option value="200">Outdoor Movie Night</option>
+
+        </select>
+
+        <p id="feeDisplay"></p>
+
+        <label>Feedback:</label>
+
+        <textarea
+          id="feedback"
+          rows="5"
+          placeholder="Enter your feedback"
+          onkeyup="countCharacters()"></textarea>
+
+        <p>
+          Characters Typed:
+          <span id="charCount">0</span>
+        </p>
+
+        <button
+          type="submit"
+          onclick="showConfirmation()">
+          Register
+        </button>
+
+        <br><br>
+
+        <output id="outputMessage"></output>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Local Community Portal</p>
+  </footer>
+
+  <script>
+
+    function validatePhone() {
+
+      let phone =
+        document.getElementById("phone").value;
+
+      if (phone.length < 10) {
+
+        alert("Phone number must contain 10 digits");
+      }
+    }
+
+    function showFee() {
+
+      let fee =
+        document.getElementById("eventType").value;
+
+      document.getElementById("feeDisplay")
+        .innerHTML =
+        "Event Fee: ₹" + fee;
+    }
+
+    function showConfirmation() {
+
+      alert("Registration Successful!");
+    }
+
+    function showMessage(event) {
+
+      event.preventDefault();
+
+      document.getElementById("outputMessage")
+        .innerHTML =
+        "You have successfully registered!";
+    }
+
+    function countCharacters() {
+
+      let text =
+        document.getElementById("feedback").value;
+
+      document.getElementById("charCount")
+        .innerHTML = text.length;
+    }
+
+  </script>
+
+</body>
+</html>
